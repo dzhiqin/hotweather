@@ -1,5 +1,6 @@
 package com.example.hotweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.hotweather.gson.Forecast;
 import com.example.hotweather.gson.Weather;
+import com.example.hotweather.service.AutoUpdateService;
 import com.example.hotweather.util.HttpUtil;
 import com.example.hotweather.util.Utility;
 
@@ -220,5 +222,7 @@ public class WeatherActivity extends AppCompatActivity {
         tvCarWash.setText(strCarWash);
         tvSport.setText(strSport);
         weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent=new Intent(this,AutoUpdateService.class);
+        startService(intent);
     }
 }

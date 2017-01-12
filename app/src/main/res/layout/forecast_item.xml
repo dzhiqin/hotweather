@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/tv_min"
         android:layout_gravity="center"
-        android:gravity="left"
+        android:gravity="right"
         android:layout_weight="1"
         android:textColor="#fff"/>
 </LinearLayout>
